@@ -11,6 +11,6 @@ LinkedIn: https://linkedin.com/in/vitorbcastro/
 ---
 
 ### License
-Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
 
-https://creativecommons.org/licenses/by-nc-sa/4.0/
+https://creativecommons.org/publicdomain/zero/1.0/
