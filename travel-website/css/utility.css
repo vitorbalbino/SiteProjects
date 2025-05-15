@@ -1,0 +1,47 @@
+
+html, body {
+    font-family: var(--font-1);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-2);
+}
+
+a {
+    color: var(--dark);
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+button, input[type="submit"] {
+    font-size: 1rem;
+    cursor: pointer;
+    font-family: var(--font-2);
+}
+
+
+.container{
+    max-width: 1320px;
+    padding: 0 1rem;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-control {
+    width: 100%;
+    margin: 0.6rem 0;
+    max-width: 500px;
+    border: 1px solid #fff;
+    padding: 0.7rem;
+    font-size: 1rem;
+    font-family: var(--font-2);
+    color: #fff;
+    background-color: transparent;
+}
