@@ -5,7 +5,7 @@ Front-End website projects with HTML, CSS3 and JavaScript.
 
 ## Projects
 
-### [Travel website](https://htmlpreview.github.io/?https://github.com/vitorbalbino/SiteProjects/blob/main/travel-website/main/index.html)
+### [Travel website](https://htmlpreview.github.io/?https://github.com/vitorbalbino/SiteProjects/blob/main/travel-website/index.html)
 
 By: [GeekProbin](https://www.youtube.com/@geekprobin1456)‎ ‎ ‎ |‎ ‎ ‎ YT Tutorial : [Travel Website Using HTML, CSS & JS | 5 parts](https://www.youtube.com/watch?v=I1lx2J_PD7E&list=PLMNhwMMnPnGo7HhHNECPCCgCRnPtubskM)
 
