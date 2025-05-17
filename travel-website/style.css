@@ -3,6 +3,7 @@
     --light-grey: #f7f7f7;
     --dark: #0e1010;
     --tran: all 0.3s ease-in-out;
+    --tran-fast: all 0.0s ease-in-out;
 
     --font-1: 'Raleway', sans-serif;
     --font-2: 'Open Sans', sans-serif;
@@ -124,7 +125,8 @@ header {
     margin: 1.8rem auto;
     max-width: 700px;
     font-weight: 500;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
+    line-height: 1.7;
 }
 
 @keyframes bounce-in-top {
@@ -189,4 +191,31 @@ header {
 
 .header-form input:not([type="submit"])::placeholder {
     color: #fff;
+}
+
+::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
+.header-form .btn {
+    margin-top: 0.8rem;
+}
+
+/* Navbar color change on scroll */
+.navbar-cng {
+    background-color: #fff;
+    box-shadow: 0px 4px 5px 0px rgba(48, 48, 84, 0.2);
+    transition: var(--tran);
+}
+
+.navbar-cng .site-brand {
+    color: var(--dark);
+}
+
+.navbar-cng .site-brand span {
+    color: var(--green);
+}
+
+.navbar-cng #navbar-show-btn {
+    color: var(--green);
 }

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid test Document</title>
+
+    <style>
+        * {
+            margin: 0px;
+        }
+
+        .color-light{
+            background-color: hsl(180, 00%, 90%);
+        }
+
+        .color-strong{
+            background-color: hsl(180, 100%, 70%);
+        }
+
+        .page-flex-container {
+            display: flex; /* pose items in list */
+            flex-wrap: wrap; /* Quebra de linha pros itens quando tamano máximo atingido */
+            min-height: 100vh;
+            position: relative;
+        }
+
+        .page-flex-item {
+            background-color: hsl(180, 100%, 70%);
+        }
+
+        .page-flex-item.top {
+            flex: 1 0 100vw;
+            background-color: hsl(0, 0%, 40%);
+            height: 200px;
+            margin-top: 0px;
+        }
+
+        .page-flex-item.middle {
+            vertical-align: baseline;
+            align-self: flex-start;
+            margin-top: 0px;
+            margin-bottom: auto;
+        }
+
+        .page-flex-item.bottom {
+            background-color: hsl(0, 0%, 40%);
+
+            flex: 1 0 100vw;
+            height: 200px;
+
+            margin-top: auto;
+            margin-bottom: 0px;
+        }
+
+        .page-flex-item.main {
+            flex: 2.5 0 500px;
+            height: 500px;
+        }
+		
+        .page-flex-item.aside {
+            flex: 1 0 200px;
+            background-color: hsl(180, 50%, 80%);
+            height: 400px;
+        }
+
+
+    </style>
+
+</head>
+<body>
+    
+    <div class="page-flex-container">
+        <div class="page-flex-item top">
+            <h1>H1</h1>
+            <p>1</p>
+        </div>
+
+        <div class="page-flex-item middle aside">
+            <h1>H1</h1>
+            <p>2</p>
+        </div>
+
+        <div class="page-flex-item middle main">
+            <h1>H1</h1>
+            <p>3</p>
+        </div>
+
+        <div class="page-flex-item middle aside">
+            <h1>H1</h1>
+            <p>4</p>
+        </div>
+
+        <div class="page-flex-item bottom">
+            <h1>H1</h1>
+            <p>8</p>
+        </div>
+
+    </div>
+
+</body>
+</html>

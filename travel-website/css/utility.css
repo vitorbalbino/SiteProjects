@@ -26,6 +26,7 @@ button, input[type="submit"] {
 .container{
     max-width: 1320px;
     padding: 0 1rem;
+    margin: 0 auto;
 }
 
 .flex{
@@ -34,14 +35,132 @@ button, input[type="submit"] {
     justify-content: center;
 }
 
+.text {
+    font-weight:400;
+    opacity: 0.9;
+    line-height: 1.6;
+    letter-spacing: 1px;
+    border: 5px, linear, magenta
+}
+
 .form-control {
     width: 100%;
     margin: 0.6rem 0;
     max-width: 500px;
     border: 1px solid #fff;
+    border-radius: 0.2rem;
     padding: 0.7rem;
     font-size: 1rem;
     font-family: var(--font-2);
     color: #fff;
     background-color: transparent;
+}
+
+.btn {
+    padding: 0.7rem 2.4rem;
+    border-radius: 0.2rem;
+    font-weight: 600;
+    background-color: var(--green);
+    color: #fff;
+    border: 1px solid var(--green);
+}
+
+.btn:hover {
+    opacity: 0.9;
+    transition: var(--tran);
+}
+
+.resize-animation-stopper * {
+    animation: none !important;
+    transition: none !important;
+}
+
+.py-4 {
+    padding: 4rem 0;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+.title-wrap {
+    text-align: center;
+    padding: 1.4rem 0;
+    margin-bottom: 2rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.lg-title {
+    font-size: 1.8rem;
+}
+
+.sm-title {
+    display: block;
+    color: #787878;
+    font-weight: 300;
+    font-size: 1.2rem;
+    padding-bottom: 1rem;
+    max-width: 450px;
+    margin-right: auto;
+    margin-left: auto;
+    line-height: 1.7;
+}
+
+.my-2 {
+    margin: 2rem 0;
+}
+
+.shadow:hover {
+    box-shadow: 0px 0px 18px -4px rgba(109, 109, 109, 0.64);
+}
+
+.featured-item {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    transition: var(--tran);
+}
+
+.featured-item::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: 
+        linear-gradient(
+            to bottom, transparent 0%, transparent 18%, 
+            rgba(0, 0, 0, 0.8) 99%, rgba(0, 0, 0, 0.8) 100%);
+}
+
+.featured-item-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    color: #fff;
+    width: 100%;
+    padding: 1rem;
+    transform: translateY(68%);
+    transition: var(--tran);
+}
+
+.featured-item-content span {
+    font-size: 1.2rem;
+    display: block;
+    margin-bottom: 1.2rem;
+    text-transform: capitalize;
+}
+
+.featured-item-content .text {
+    color:#fff;
+    transition: var(--tran);
+}
+
+.featured-item:hover .featured-item-content {
+    transform: translateY(0);
 }
