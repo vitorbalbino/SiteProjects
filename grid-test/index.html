@@ -6,94 +6,190 @@
     <title>Grid test Document</title>
 
     <style>
+        /* Reset some default browser styles */
         * {
-            margin: 0px;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        .color-light{
-            background-color: hsl(180, 00%, 90%);
+        html, body {
+            height: 100%; /* Ensure full height is used */
         }
 
-        .color-strong{
-            background-color: hsl(180, 100%, 70%);
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
         }
 
-        .page-flex-container {
-            display: flex; /* pose items in list */
-            flex-wrap: wrap; /* Quebra de linha pros itens quando tamano máximo atingido */
-            min-height: 100vh;
-            position: relative;
+        /* Container to hold the whole page structure */
+        
+        .page-container {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensures at least full viewport height */
+            width: 100%;
         }
 
-        .page-flex-item {
-            background-color: hsl(180, 100%, 70%);
-        }
-
-        .page-flex-item.top {
-            flex: 1 0 100vw;
-            background-color: hsl(0, 0%, 40%);
-            height: 200px;
-            margin-top: 0px;
-        }
-
-        .page-flex-item.middle {
-            vertical-align: baseline;
-            align-self: flex-start;
-            margin-top: 0px;
+        /* Header and Navigation - Fixed at top with dynamic content height */
+        .page-top-container {
+            top: 0;
             margin-bottom: auto;
         }
 
-        .page-flex-item.bottom {
-            background-color: hsl(0, 0%, 40%);
-
-            flex: 1 0 100vw;
-            height: 200px;
-
-            margin-top: auto;
-            margin-bottom: 0px;
+        /* Main container for the three-column layout */
+        .page-mid-container {
+            display: flex;
+            flex: 1; /* Take up all available space between header and footer */
+            width: 100%;
+            min-height: 0; /* Important for Firefox flexible box height calculation */
         }
 
-        .page-flex-item.main {
+        /* Main container for the three-column layout */
+        .page-bottom-container {
+            width: 100%;
+            margin-top: auto; /* Push footer to bottom when content is short */
+        }
+
+
+        header {
+            /* position: sticky; */
+            width: 100%;
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+            z-index: 100; 
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap; /* Allow wrapping of nav items if content is large */
+            background-color: #e0e0e0;
+            padding: 1rem;
+        }
+
+        /* Main content section */
+        main {
             flex: 2.5 0 500px;
-            height: 500px;
+            margin: 0 auto;
+            padding: 1rem;
+            overflow-y: visible; /* Allow content to expand and page to scroll */
+            background-color: #fff;
         }
-		
-        .page-flex-item.aside {
+
+        .width-1320 {
+            width: 500px;
+            margin: 0 auto;
+        }
+
+        .width-500 {
+            width: 500px;
+            margin: 0 auto;
+        }
+
+         
+
+        .left-aside, .right-aside {
             flex: 1 0 200px;
-            background-color: hsl(180, 50%, 80%);
-            height: 400px;
+            height: auto;
+            background-color: #f4f4f4;
+            padding: 1rem;
+            overflow-y: visible; /* Allow content to expand and page to scroll */
         }
 
+        .left-aside .content, .right-aside .content {
+            width: 300px;
+            margin: 0 auto;
+        }
 
+        /* Footer - Always at bottom */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 900px) {
+            .page-mid-container {
+                flex-direction: column;
+            }
+            
+            main {
+                width: 100%;
+                min-width: 500px;
+            }
+            
+            .left-aside, .right-aside {
+                width: 100%;
+                height: auto;
+            }
+
+            .left-aside .content, .right-aside .content {
+                width: 500px;
+            }
+        }
     </style>
 
 </head>
 <body>
-    
-    <div class="page-flex-container">
-        <div class="page-flex-item top">
-            <h1>H1</h1>
-            <p>1</p>
+
+    <div class="page-container">
+
+        <div class="page-top-container">
+            <header>
+                <h1>Header</h1>
+            </header>
+
+            <nav>
+                <div>
+                    <p>Navigation link 1</p>
+                    <p>Navigation link 2</p>
+                    <p>Navigation link 3</p>
+                </div>
+            </nav>
         </div>
 
-        <div class="page-flex-item middle aside">
-            <h1>H1</h1>
-            <p>2</p>
+
+        <div class="page-mid-container">
+            <aside class="left-aside">
+                <div class="content">
+                    <h2>Aside L</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt perferendis ipsa a hic perspiciatis eligendi odit voluptate fuga rem excepturi!</p>
+                    </br>           
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt perferendis ipsa a hic perspiciatis eligendi odit voluptate fuga rem excepturi!</p>
+                    </br>           
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt perferendis ipsa a hic perspiciatis eligendi odit voluptate fuga rem excepturi!</p>
+                </div>
+            </aside>
+            
+            <main>
+                <div class="width-1320">
+                    <h1>Main</h1>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos aperiam odio ipsum magni voluptates assumenda cupiditate quod et ab? Unde, quod nostrum nemo deserunt, quia, animi culpa blanditiis odio non tenetur alias qui necessitatibus atque. Odio dolore deserunt autem ducimus alias cum eaque sit cumque pariatur consequuntur architecto, velit unde deleniti maiores, laboriosam in ea non eum voluptatem officiis veritatis provident nihil aspernatur? Eos quia rem nostrum aspernatur aliquam incidunt nisi ipsum sit! Nulla quo corrupti vel sed natus! Possimus voluptates magnam repellendus impedit. Assumenda, fugiat unde. Voluptatem, corrupti ut molestias aliquam totam non ipsum minus praesentium consectetur voluptatum tenetur animi ab aut quidem omnis assumenda iste accusamus quia facere unde aperiam. Sunt dicta nostrum laudantium ea vel sit iure ad earum officia nesciunt, exercitationem fugit excepturi voluptatibus sint? Placeat, esse est? Laudantium, totam! Provident, harum voluptatum, recusandae excepturi a quae consequuntur architecto vitae dignissimos tempora eum cumque. Iure molestias, cupiditate assumenda iusto dolorum totam, repudiandae quos esse molestiae modi aut ex libero. Nam aut saepe vel ut veritatis quis. Accusantium, optio voluptate consectetur cum libero sint quidem delectus cumque, explicabo maxime alias qui voluptatum non? Hic tenetur voluptatibus odio fugiat possimus ea natus? Consectetur labore modi ratione animi eos.</br> </p> 
+                </div>
+            </main>
+            
+            <aside class="right-aside">
+                <div class="content">
+                    <h2>Aside R</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt perferendis ipsa a hic perspiciatis eligendi odit voluptate fuga rem excepturi!</p>
+                    </br>           
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt perferendis ipsa a hic perspiciatis eligendi odit voluptate fuga rem excepturi!</p>
+                    </br>           
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt perferendis ipsa a hic perspiciatis eligendi odit voluptate fuga rem excepturi!</p>
+                </div>
+            </aside>
         </div>
 
-        <div class="page-flex-item middle main">
-            <h1>H1</h1>
-            <p>3</p>
-        </div>
 
-        <div class="page-flex-item middle aside">
-            <h1>H1</h1>
-            <p>4</p>
-        </div>
-
-        <div class="page-flex-item bottom">
-            <h1>H1</h1>
-            <p>8</p>
+        <div class="page-bottom-container">
+            <footer>
+                <h2>Footer</h2>
+            </footer>
         </div>
 
     </div>

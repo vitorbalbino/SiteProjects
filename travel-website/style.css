@@ -302,3 +302,18 @@ header {
     margin-top: 1.6rem;
     display: inline-block;
 }
+
+
+/* Testimonials */
+#testimonials {
+    background-color: var(--light-grey);
+}
+
+.test-item {
+    border: 2px solid var(--light-grey);
+    border-radius: 0.2rem;
+    padding: 2rem 1rem;
+    position: relative;
+    background-color: #fff;
+    margin: 2rem 0 14rem 0;
+}
