@@ -54,6 +54,7 @@ button, input[type="submit"] {
     font-family: var(--font-2);
     color: #fff;
     background-color: transparent;
+    box-sizing: border-box;
 }
 
 .btn {

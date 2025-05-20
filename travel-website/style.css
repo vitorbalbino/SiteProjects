@@ -317,3 +317,155 @@ header {
     background-color: #fff;
     margin: 2rem 0 14rem 0;
 }
+
+.test-item::after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid #fff;
+}
+
+.test-item-info {
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.test-item-info img {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    margin: 1rem;
+}
+
+.test-item-info h3 {
+    font-size: 1rem;
+}
+
+
+/* video */
+.video-wrapper {
+    height: 500px;
+    position: relative;
+}
+
+.video-wrapper video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+#play-btn {
+    position: absolute;
+    z-index: 5;
+    width: 70px;
+    height: 70px;
+    background-color: var(--green);
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 1.8rem;
+    padding-left: 0.7rem;
+    transition: var(--tran);
+}
+
+#play-btn:hover {
+    transform: scale(1.1);
+}
+
+
+/* footer */
+footer {
+    background-color: var(--dark);
+    color: #fff;
+    text-align: center;
+    position: relative;
+}
+
+footer::before {
+    content: "";
+    position: absolute;
+    background-color: var(--green);
+    height: 4px;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+footer .site-brand {
+    margin-bottom: 1.5rem;
+    display: block;
+    font-size: 2rem!important;
+}
+
+.footer-item {
+    margin: 3rem 0;
+}
+
+.footer-item a {
+    font-size: 1.2rem;
+    color: #fff;
+    transition: var(--tran);
+}
+
+.footer-item a:hover {
+    color: var(--green);
+}
+
+.footer-item ul {
+    padding: 0;
+}
+
+.footer-item h2 {
+    margin-bottom: 1.4rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+}
+
+.social-links li {
+    margin: 0.5rem;
+}
+
+.footer-item:nth-child(3) li {
+    margin: 0.5rem 0;
+}
+
+.footer-item:nth-child(3) a {
+    display: inline-block;
+    font-size: 1rem;
+    opacity: 0.7;
+}
+
+.subscribe-form form {
+    flex-direction: column;
+}
+
+.subscribe-form form input {
+    width: 100%;
+    max-width: 300px;
+}
+
+.subscribe-form .form-control {
+    border-color: rgba(255, 255, 255, 0.3);
+    transition: var(--tran);
+}
+
+.subscribe-form .form-control:focus {
+    border-color: #fff;
+}
+
+.subscribe-form form input[type="email"]::placeholder {
+    color: #fff;
+    opacity: 0.3;
+}
